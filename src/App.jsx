@@ -1,10 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 import AppBar from "./components/AppBar";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
     <>
       <AppBar />
-      <h1 className="bg-rose-600 font-bold text-2xl">Tailwind test</h1>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blogs" element={<BlogPage />} />
+      </Routes>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Navbar, Nav, Sidebar, Sidenav } from "rsuite";
+import { Link } from "react-router-dom";
 function AppBar() {
   const [isOpen, setIsOpen] = useState(false);
   function handleSideBar() {
@@ -30,17 +31,25 @@ function AppBar() {
 function NavItems() {
   return (
     <>
-      <Nav.Item>Home</Nav.Item>
-      <Nav.Item>About</Nav.Item>
-      <Nav.Item>Contact</Nav.Item>
-      <Nav.Item>Blogs</Nav.Item>
+      <Nav.Item>
+        <Link to="/">Home</Link>
+      </Nav.Item>
+      <Nav.Item href="/about">
+        <Link to="">About</Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Link to="/contact">Contact</Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Link to="/blogs">Blogs</Link>
+      </Nav.Item>
     </>
   );
 }
 
 function SideBar() {
   return (
-    <Sidebar className="fixed right-0">
+    <Sidebar className="fixed right-0 z-10">
       <Sidenav>
         <Sidenav.Body>
           <Nav>
