@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1f1f1f; /* Dark background for the article container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Slightly more pronounced shadow */
+  }
+  
+.article-content {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #e0e0e0; /* Light gray text for content */
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.article-content h2,
+.article-content h3 {
+  color: #ffffff; /* White for subheadings */
+  margin-top: 20px;
+  border-bottom: 2px solid #333; /* Darker border for subheadings */
+  padding-bottom: 5px;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+}
+
+.article-content blockquote {
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-left: 4px solid #444; /* Slightly lighter border for blockquotes */
+  background: #2c2c2c; /* Dark background for blockquote */
+  color: #e0e0e0; /* Light text for blockquotes */
+  font-style: italic;
+}
+
+.article-content a {
+  color: #1e90ff; /* Bright blue link color */
+  text-decoration: none;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+}
