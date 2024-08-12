@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import BlogCard from "../components/BlogCard";
+import { client } from "../lib/contentful.config";
 
 function BlogPage() {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    client.getEntries().then((res) => console.log(res));
+  }, []);
   return (
     <div>
       <h1 className="font-extrabold text-center text-2xl">Blogs</h1>
