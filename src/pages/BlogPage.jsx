@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import SearchBar from "../components/SearchBar";
-import BlogCard from "../components/BlogCard";
-import { client } from "../lib/contentful.config";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import BlogCard from "../components/BlogCard";
+import SearchBar from "../components/SearchBar";
+import { client } from "../lib/contentful.config";
 
 function BlogPage() {
   const [blogs, setBlogs] = useState([]);
